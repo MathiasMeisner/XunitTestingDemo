@@ -12,12 +12,13 @@ namespace TestingDemo.Tests
     public class MessageTests
     {
         private readonly MessageAdder messageAdder;
-        private readonly Sender _sender;
+
 
         public MessageTests()
         {
-            messageAdder = new MessageAdder(new Sender());
+            messageAdder = new MessageAdder();
         }
+
 
         [Fact]
         public void IsMessageAdded_ShouldPass()

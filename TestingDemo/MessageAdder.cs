@@ -1,12 +1,14 @@
 ﻿namespace TestingDemo
 {
-    public class MessageAdder : Sender
+    public class MessageAdder : ISender
     {
-        private readonly Sender _sender;
 
-        public MessageAdder(Sender sender)
+        public bool WhoIs(string sender)
         {
-            _sender = sender;
+            if (sender == "Mathias") return true;
+                return false;
+            
+
         }
 
         public bool IsMessageAdded(string message, string sender)
